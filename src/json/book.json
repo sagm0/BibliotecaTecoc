@@ -1,0 +1,9 @@
+[
+  {
+    "id":1,
+    "nombre":"el gran gatsby",
+    "autor":"F. scott fitherald",
+    "genero":"novela",
+    "estado":1
+  }
+]
