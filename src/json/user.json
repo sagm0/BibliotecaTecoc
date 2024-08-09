@@ -1,0 +1,41 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "nombre": "Carlos",
+        "apellido": "González",
+        "edad": 21,
+        "programa": "sistemas",
+        "correo": "carlos.gonzalez@tecoc.edu",
+        "id_rol": 2
+      },
+      {
+        "id": 2,
+        "nombre": "Ana",
+        "apellido": "Martínez",
+        "edad": 23,
+        "programa": "Agropecuaria",
+        "correo": "ana.martinez@tecoc.edu",
+        "id_rol": 3
+      },
+      {
+        "id": 3,
+        "nombre": "Luis",
+        "apellido": "Ramírez",
+        "edad": 20,
+        "programa": "mecanica",
+        "correo": "luis.ramirez@tecoc.edu",
+        "id_rol": 1
+      },
+      {
+        "id": 4,
+        "nombre": "María",
+        "apellido": "López",
+        "edad": 22,
+        "programa": "Admin",
+        "correo": "maria.lopez@tecoc.edu",
+        "id_rol": 2
+      }
+    ]
+  }
+  

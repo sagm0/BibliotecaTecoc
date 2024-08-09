@@ -1,0 +1,215 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.usuarios {   /*Parte del login*/
+    
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif; /*tipo de letra*/
+  color: #fff; /*color de texto del */
+  text-align: center;
+}
+a {
+  padding: 10px 50px;
+  height: 14px;
+  margin-left: 2cm;
+  font-weight: 500;
+  color: black;
+  color: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background: rgb(0,93,255);
+  background-image: radial-gradient(circle at 46.56% 42.63%, #0bebff 0, #3cb5f2 50%, #4083ae 100%);
+  text-decoration: inherit;
+  outline: none;
+  border-radius: 2cm;
+  transition: background-color 0.3s ease; /* Añade transición suave si es necesario */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover,
+a:focus {
+  color: black;
+  background-color: rgba(0,93,255,0.8); /* Controla el color de fondo al enfocar o hacer hover */
+}
+.navBarDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vh;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente por defecto */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.navBarDiv:hover {
+  transform: scale(1.05); /* Ligeramente aumenta el tamaño al hacer hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo más brillante al hacer hover */
+}
+
+.activado{  /*NavBar*/
+  background: rgb(2,0,36);
+  background-image: radial-gradient(circle at 50% -20.71%, #a7deff 0, #6c90d8 50%, #38496b 100%);
+  border-radius: 2cm;
+}
+body {
+  background-image: radial-gradient(circle at 50% -20.71%, #a3a7ff 0, #7a8ffc 25%, #3c78f2 50%, #0063e8 75%, #0051de 100%);
+  align-items: center;
+  justify-content: center;
+  flex-direction: center;
+  min-width: 320px;
+  min-height: 95vh;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  animation: fadeInUp 1s ease-in-out; /* Aplica la animación */
+}
+/* Definir la animación */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Empieza 20px abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
+button {
+  border-radius: 1cm;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  margin: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-image: radial-gradient(circle at 46.56% 42.63%, #0bebff 0, #3cb5f2 50%, #4083ae 100%);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+input{
+  width: 6cm;
+  height: 35px;
+  border-radius: 2cm;
+  margin: 10px;
+}
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+  text-align: center; /* Centra el texto */
+}
+
+.inputsContainer h1 {
+  margin-bottom: 20px; /* Añade espacio debajo del título */
+}
+
+.inputsContainer input {
+  width: 6cm;
+  height: 35px;
+  border-radius: 2cm;
+  margin: 10px;
+  padding: 0 15px; /* Añade padding dentro del input */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para los inputs */
+  border: 1px solid #ccc; /* Añade un borde a los inputs */
+}
+
+.inputsContainer button {
+  border-radius: 1cm;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  margin: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-image: radial-gradient(circle at 46.56% 42.63%, #0bebff 0, #3cb5f2 50%, #4083ae 100%);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inputsContainer button:hover {
+  border-color: #646cff;
+  transform: scale(1.05); /* Aumenta ligeramente el botón al pasar el cursor */
+}
+.Admin{ /*pagina de Admin*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loan-management {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.loan-form, .return-form {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.reports {
+  text-align: center;
+}
+
+.reports button, .reports input {
+  margin: 10px;
+}
+
