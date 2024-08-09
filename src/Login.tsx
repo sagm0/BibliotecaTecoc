@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-
+import { usuarios } from './UserInterface';
 
 const Login = () => {
   const [userName, setUserName] = useState<string>("");
@@ -9,32 +9,32 @@ const Login = () => {
   const emailRegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const [redirecto, setRedirecto] = useState<string | null>(null);
   
-//   useEffect(() => {
-//     const usuarioEncontrado = usuarios.some(user => user.correo === userName);
-//     setUserExists(usuarioEncontrado);
-// }, [userName]);
+  useEffect(() => {
+    const usuarioEncontrado = usuarios.some(user => user.correo === userName);
+    setUserExists(usuarioEncontrado);
+}, [userName]);
 
-useEffect(() => {
+  useEffect(() => {
   const isAuthenticated = localStorage.getItem('isAuthenticated');
   if (isAuthenticated === 'true') {
-      setRedirecto('/home');
+      setRedirecto('/admin');
   }
 }, []);
 
-  const loginHandler = () => {
-    // Verificar si el correo es válido 
-    if (emailRegExp.test(userName)) {
-        if (userName.includes('tecoc.edu'))
-        {
-            console.log("Acceso permitido");
-            localStorage.setItem('isAuthenticated', 'true');
-            setRedirecto('/admin')
-        }
-      // Redirige a la página de inicio
+const loginHandler = () => {
+  // Verificar si el correo es válido 
+  if (emailRegExp.test(userName) && userExists) {
+    if (userName.includes('tecoc.edu')) {
+      console.log("Acceso permitido");
+      localStorage.setItem('isAuthenticated', 'true');
+      setRedirecto('/admin');
     } else {
-      setErrorMessage("Correo no válido ");
+      setErrorMessage("Dominio de correo no válido.");
     }
+  } else {
+    setErrorMessage("Correo no válido o usuario no encontrado.");
   }
+};
   if(redirecto){
     return <Navigate to ={redirecto} />
   }

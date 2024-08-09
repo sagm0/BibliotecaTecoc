@@ -3,11 +3,10 @@ export interface Userinterface {
   nombre: string;
   apellido: string;
   edad: number;
-  sexo: string;
   correo: string;
   programa: string;
   id_rol: number;
 }
 
-// import usuariosData from './data/personas.json';
-// export const usuarios: Usuario[] = usuariosData;
+import usuariosData from './json/user.json';
+export const usuarios: Userinterface[] = usuariosData;

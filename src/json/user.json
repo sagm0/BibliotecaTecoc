@@ -1,5 +1,4 @@
-{
-    "usuarios": [
+    [
       {
         "id": 1,
         "nombre": "Carlos",
@@ -37,5 +36,5 @@
         "id_rol": 2
       }
     ]
-  }
+  
   

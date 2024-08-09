@@ -4,9 +4,12 @@ export const UserRegistration = () => {
     <div className="inputsContainer">
       <h1> USUARIOS</h1>
       <form>
-        <input type="text" placeholder="Nombre" />
-        <input type="text" placeholder="Número de Identificación" />
-        <input type="text" placeholder="Dirección" />
+      <input type="text" placeholder="Id" /><br />
+        <input type="text" placeholder="Nombre" /><br />
+        <input type="text" placeholder="Apellido" /><br />
+        <input type="text" placeholder="Edad" /><br />
+        <input type="text" placeholder="Programa" /><br />
+        <input type="text" placeholder="Correo" /><br />
         <button type="submit">Agregar Usuario</button>
       </form>
     </div>

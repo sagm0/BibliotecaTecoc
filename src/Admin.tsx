@@ -1,4 +1,29 @@
+
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
+
 const Admin = () => {
+  const [redirectTo, setRedirectTo] = useState<string | null>(null);
+
+const logoutHandler = () => {
+    localStorage.removeItem('isAuthenticated');
+    setRedirectTo('/');
+}
+
+if (redirectTo) {
+    return <Navigate to={redirectTo} />
+}
+
+
+
+  const isAuthenticated = localStorage.getItem("isAuthenticated");
+
+if(isAuthenticated !== 'true') {
+  return <Navigate to='/'/>
+} 
+
+
+
   return (
     <div className="Admin">
       <h1>¡Bienvenido al sistema de gestión de la biblioteca del Tecoc!</h1>
@@ -8,6 +33,7 @@ const Admin = () => {
       <h3>Gestión de Usuarios</h3>
       <h3>Reportes y Consultas</h3>
       <h3>Seguridad y Accesibilidad</h3>
+      <button onClick={logoutHandler}> Logaut</button>
     </div>
   )
 }
