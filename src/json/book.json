@@ -1,9 +1,37 @@
 [
   {
-    "id":1,
-    "nombre":"el gran gatsby",
-    "autor":"F. scott fitherald",
-    "genero":"novela",
-    "estado":1
+    "id": 1,
+    "nombre": "El gran Gatsby",
+    "autor": "F. Scott Fitzgerald",
+    "genero": "Novela",
+    "estado": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Cien años de soledad",
+    "autor": "Gabriel García Márquez",
+    "genero": "Realismo mágico",
+    "estado": 1
+  },
+  {
+    "id": 3,
+    "nombre": "1984",
+    "autor": "George Orwell",
+    "genero": "Distopía",
+    "estado": 0
+  },
+  {
+    "id": 4,
+    "nombre": "Orgullo y prejuicio",
+    "autor": "Jane Austen",
+    "genero": "Romance",
+    "estado": 1
+  },
+  {
+    "id": 5,
+    "nombre": "Don Quijote de la Mancha",
+    "autor": "Miguel de Cervantes",
+    "genero": "Novela",
+    "estado": 1
   }
 ]

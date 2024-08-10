@@ -2,7 +2,7 @@
 export const UserRegistration = () => {
   return (
     <div className="inputsContainer">
-      <h1> USUARIOS</h1>
+      <h1> AGREGAR USUARIO</h1>
       <form>
       <input type="text" placeholder="Id" /><br />
         <input type="text" placeholder="Nombre" /><br />
