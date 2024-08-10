@@ -32,7 +32,7 @@ const loginHandler = () => {
       setErrorMessage("Dominio de correo no válido.");
     }
   } else {
-    setErrorMessage("Correo no válido o usuario no encontrado.");
+    setErrorMessage("Correo no válido");
   }
 };
   if(redirecto){
@@ -45,13 +45,17 @@ const loginHandler = () => {
 
   return (
     <div className='usuarios'>
+      <img className="tecoc" src="/src/img/tecoc.png" alt="" />
       <h1>Login</h1>
       <h3>USUARIOS</h3>
-      <input type="text" name="u"placeholder="Email" value={userName}
-        onChange={(event) => setUserName(event.target.value)}
+      <input type="text" name="u" placeholder="Email" value={userName}
+        onChange={(event) => {
+          setUserName(event.target.value);
+          setErrorMessage(""); // Limpiar el mensaje de error al cambiar el texto
+        }}
       />
       <br />
-      {errorMessage && <h3 style={{ color: 'white' }}>{errorMessage}</h3>}
+      {errorMessage && <h3 style={{ color: 'red' }}>{errorMessage}</h3>}
       <button onClick={handlerClear} type='button'>Clear</button>
       <button type="button" onClick={loginHandler}>Login</button>
     </div>
